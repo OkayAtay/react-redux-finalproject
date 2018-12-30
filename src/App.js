@@ -5,6 +5,7 @@ import PotluckList from './containers/PotluckList'
 
 class App extends Component {
   render() {
+    console.log("potlucks", this.props)
     return (
       <div className="App">
         <header className="App-header">

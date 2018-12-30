@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
 import { fetchPotlucks, deletePotluck } from '../actions/potluckActions'
 
 // this is where all my actions go
@@ -21,8 +22,8 @@ class PotluckList extends Component {
 
     return (
       <div>
-        { potlucks.map(potluck => <Potluck key={ potluck.id } potluck={ potluck }/>)}
         <h2> Add your potluck event here </h2>
+        { potlucks.map(potluck => <Potluck key={ potluck.id } potluck={ potluck }/>)}
         <PotluckForm/>
       </div>
     )
