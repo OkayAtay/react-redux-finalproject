@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { fetchPotlucks, deletePotluck } from '../actions/potluckActions'
+import { deleteRecipe } from '../actions/recipeActions'
 
 // this is where all my actions go
 
@@ -40,7 +41,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   fetchPotlucks,
-  deletePotluck
+  deletePotluck,
+  deleteRecipe
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(PotluckList)
