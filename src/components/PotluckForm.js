@@ -46,12 +46,12 @@ class PotluckForm extends Component {
     const { name, date, time, location, description } = this.state
 
     return (
-      <form>
-        <input name="name" placeholder="Name" value={ name }/><br></br>
-        <input name="date" placeholder="Date" value={ date }/><br></br>
-        <input name="time" placeholder="Time" value={ time }/><br></br>
-        <input name="location" placeholder="Location" value={ location }/><br></br>
-        <input name="description" placeholder="Description" value={ description }/><br></br>
+      <form onSubmit={ this.onSubmit }>
+        <input name="name" placeholder="Name" value={ name } onChange={ this.onChange }/><br></br>
+        <input name="date" placeholder="Date" value={ date } onChange={ this.onChange }/><br></br>
+        <input name="time" placeholder="Time" value={ time } onChange={ this.onChange }/><br></br>
+        <input name="location" placeholder="Location" value={ location } onChange={ this.onChange }/><br></br>
+        <input name="description" placeholder="Description" value={ description } onChange={ this.onChange }/><br></br>
         <button type="submit"> Create New Potluck </button>
       </form>
     )

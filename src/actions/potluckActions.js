@@ -17,7 +17,7 @@ export const fetchPotlucks = () => {
       type: 'FETCH_POTLUCKS',
       payload: potlucks
     }))
-      .catch(err=>err)
+      .catch(() => console.log("Can't access response. Please try again later"))
   }
 }
 
