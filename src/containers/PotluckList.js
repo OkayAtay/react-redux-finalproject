@@ -23,8 +23,9 @@ class PotluckList extends Component {
 
     return (
       <div>
-        <h2> Add your potluck event here </h2>
+        <h2>Upcoming Potlucks:</h2>
         { potlucks.map(potluck => <Potluck key={ potluck.id } potluck={ potluck }/>)}
+        <h2> Add your potluck event here...</h2>
         <PotluckForm/>
       </div>
     )

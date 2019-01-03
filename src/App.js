@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PotluckList from './containers/PotluckList'
 
@@ -9,11 +8,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Welcome to my React/Redux Potluck App.
+        <h2> Welcome to the Potluck Organizer - Let's Eat! </h2>
             <PotluckList />
-          </p>
         </header>
       </div>
     );

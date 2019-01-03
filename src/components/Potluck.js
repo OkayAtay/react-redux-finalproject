@@ -4,7 +4,7 @@ import RecipeForm from './RecipeForm'
 
 const Potluck = ({ potluck: {id, name, date, time, location, description, recipes }, deletePotluck, deleteRecipe }) =>
   <div>
-    <h1>{ name }</h1>
+    <h3>{ name }</h3>
     <p>{ time },{ date },{ location },{ description }<br></br>
     <button onClick={ () => deletePotluck(id)}>Delete Potluck</button></p>
     <ul>
