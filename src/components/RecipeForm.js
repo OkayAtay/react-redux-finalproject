@@ -28,7 +28,7 @@ class RecipeForm extends Component {
 
     onSubmit(e) {
       e.preventDefault()
-
+      debugger
       const { potluckId } = this.props
       this.props.createRecipe(this.state, potluckId)
       this.setState({
