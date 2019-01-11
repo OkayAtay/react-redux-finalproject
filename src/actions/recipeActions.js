@@ -22,7 +22,9 @@ export const fetchRecipes = potluck => {
   }
 }
 
+
 export const createRecipe = (recipe, potluckId) => {
+  debugger
   let data = {
     method: 'POST',
     headers: {
@@ -48,7 +50,7 @@ export const deleteRecipe = (id, potluckId) => {
     method: 'DELETE',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'applicaiton/json'
+      'Content-Type': 'application/json'
     }
   }
 
