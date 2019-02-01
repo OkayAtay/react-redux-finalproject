@@ -14,7 +14,7 @@ class PotluckForm extends Component {
         date: "",
         time: "",
         location: "",
-        description: ""
+        description: "",
       }
 
     this.onChange = this.onChange.bind(this)
@@ -31,8 +31,9 @@ class PotluckForm extends Component {
 
     onSubmit(e) {
       e.preventDefault()
-
+      console.log('A')
       this.props.createPotluck(this.state)
+      console.log('B')
       this.setState({
         name: "",
         date: "",
@@ -42,11 +43,14 @@ class PotluckForm extends Component {
       })
     }
 
+
+
   render() {
     const { name, date, time, location, description } = this.state
 
     return (
       <div>
+
         <form onSubmit={ this.onSubmit }>
           <input name="name" placeholder="Name" value={ name } onChange={ this.onChange }/><br></br>
           <input name="date" placeholder="Date" value={ date } onChange={ this.onChange }/><br></br>

@@ -29,13 +29,14 @@ class RecipeForm extends Component {
 
     updatePotluckRecipes = () => {
       const { potluckId } = this.props
-      debugger
+      const { id } = this.props.recipe
+      //debugger
       var newRecipe = {
         id: this.props.recipe.id,
         name: this.props.recipe.name,
         description: this.props.recipe.description,
         category: this.props.recipe.category,
-        additional_info: this.props.recipe.additiona_info
+        additional_info: this.props.recipe.additional_info
       };
 
       this.props.createRecipe(newRecipe, potluckId)
@@ -43,7 +44,7 @@ class RecipeForm extends Component {
 
     onSubmit(e) {
       e.preventDefault()
-      debugger
+      //debugger
       const { potluckId } = this.props
       this.props.createRecipe(this.state, potluckId)
       this.setState({

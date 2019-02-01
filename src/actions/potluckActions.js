@@ -22,6 +22,7 @@ export const fetchPotlucks = () => {
 }
 
 export const createPotluck = potluck => {
+  console.log('C')
   let data = {
     method: 'POST',
     headers: {
@@ -31,15 +32,17 @@ export const createPotluck = potluck => {
     body: JSON.stringify({ potluck })
   }
 
-  return dispatch => {
+   return dispatch => {
     fetch(`${ baseURL }/potlucks`, data)
       .then(response => response.json())
-      .then(potluck => dispatch({
+      .then(potluck =>{
+          dispatch({
         type: 'CREATE_POTLUCK',
         payload: potluck
-      }))
+      })})
       .catch(err=>err)
   }
+  console.log('E')
 }
 
 export const deletePotluck = id => {
