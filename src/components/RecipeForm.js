@@ -59,7 +59,7 @@ class RecipeForm extends Component {
       const { name, description, category, additional_info } = this.state
 
       return (
-          <div>
+          <div className='form'>
             <h2>Add A Recipe</h2>
                   <form onSubmit={ this.onSubmit }>
                     <input name="name" placeholder="Name" value={ name } onChange={ this.onChange }/><br></br>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import PotluckList from './containers/PotluckList'
 
+
 class App extends Component {
   render() {
     console.log("potlucks", this.props)
